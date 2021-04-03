@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow: none;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  background-color: #fff;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+footer a:hover {
+  color: #3498db;
+}
+
+.author {
+  left: 3%;
+  position: absolute;
+  padding: .89rem 1rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.author a,
+.author a:visited {
+  font-family: 'Overlock', Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.author a:hover {
+  color: #3498db;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 20%;
+  height: calc(88vh / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  outline: none;
+}
+
+.box:hover {
+  border: 2px solid #111;
+  color: #111;
+}
+
+.alertBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 80%;
+  color: #fff;
+  font-size: 4em;
+  text-align: center;
+  display: none;
+  transition: 500ms;
+}
+
+.alertBox.active {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: blowUpModal .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.alertBox.out {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: blowUpModalTwo .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+
+@keyframes blowUpModal {
+  0% {
+    transform:scale(0);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+@keyframes blowUpModalTwo {
+  0% {
+    transform:scale(1);
+    opacity:1;
+  }
+  100% {
+    transform:scale(0);
+    opacity:0;
+  }
+}
