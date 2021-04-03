@@ -25,7 +25,7 @@ for(let i = 1; i <= 25; i++) {
       alertBox.classList.add('out')
       setTimeout(() => {
         alertBox.classList.remove('out')
-      }, 3000)
+      }, 2500)
     }, 2000)
   })
 }
